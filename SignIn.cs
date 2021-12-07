@@ -56,5 +56,10 @@ namespace HospitalManagementSystem
             this.Hide();
             new MainBoard().Show();
         }
+
+        private void SignIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
