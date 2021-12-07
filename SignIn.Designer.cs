@@ -49,6 +49,7 @@ namespace HospitalManagementSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 64);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -113,6 +114,7 @@ namespace HospitalManagementSystem
             this.signinButton.TabIndex = 7;
             this.signinButton.Text = "Sign In";
             this.signinButton.UseVisualStyleBackColor = true;
+            this.signinButton.Click += new System.EventHandler(this.signinButton_Click);
             // 
             // exitLink
             // 

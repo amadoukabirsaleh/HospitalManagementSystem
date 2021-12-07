@@ -45,5 +45,16 @@ namespace HospitalManagementSystem
         {
             this.Close();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void signinButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new MainBoard().Show();
+        }
     }
 }
