@@ -45,5 +45,11 @@ namespace HospitalManagementSystem
         {
             this.Close();
         }
+
+        private void signinButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new DoctorPanel().Show();
+        }
     }
 }
