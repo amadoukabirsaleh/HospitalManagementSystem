@@ -54,7 +54,7 @@ namespace HospitalManagementSystem
         private void signinButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new MainBoard().Show();
+            new PatientPannel().Show();
         }
 
         private void SignIn_Load(object sender, EventArgs e)
