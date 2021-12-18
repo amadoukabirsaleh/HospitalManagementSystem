@@ -36,7 +36,7 @@ namespace HospitalManagementSystem
             {
                 progressBar1.Value = 0;
                 timer1.Stop();
-                SignIn s = new SignIn();
+                MainBoard s = new MainBoard();
                 s.Show();
                 this.Hide();
             }
