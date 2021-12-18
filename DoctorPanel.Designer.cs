@@ -29,15 +29,18 @@ namespace HospitalManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("bruhhh");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("damn");
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.DoctorExit = new System.Windows.Forms.Button();
             this.DoctorInfo = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.DoctorLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.AptDelete = new System.Windows.Forms.Button();
@@ -60,49 +63,85 @@ namespace HospitalManagementSystem
             this.Status = new System.Windows.Forms.ColumnHeader();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.DoctorEdit = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.DoctorInfo.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
             this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1404, 64);
+            this.panel1.Size = new System.Drawing.Size(1228, 48);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Crimson;
-            this.panel2.Location = new System.Drawing.Point(-1, 670);
+            this.panel2.Location = new System.Drawing.Point(-1, 502);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1406, 64);
+            this.panel2.Size = new System.Drawing.Size(1230, 48);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel3.Controls.Add(this.DoctorEdit);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.DoctorExit);
             this.panel3.Controls.Add(this.DoctorInfo);
             this.panel3.Controls.Add(this.DoctorLabel);
-            this.panel3.Location = new System.Drawing.Point(1, 64);
+            this.panel3.Location = new System.Drawing.Point(1, 48);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(311, 606);
+            this.panel3.Size = new System.Drawing.Size(272, 454);
             this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.Info;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Location = new System.Drawing.Point(10, 138);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(252, 28);
+            this.panel5.TabIndex = 4;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 15);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Speciality:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(115, 4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 15);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Surgeon";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // DoctorExit
             // 
-            this.DoctorExit.Location = new System.Drawing.Point(28, 562);
+            this.DoctorExit.Location = new System.Drawing.Point(24, 422);
+            this.DoctorExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DoctorExit.Name = "DoctorExit";
-            this.DoctorExit.Size = new System.Drawing.Size(244, 38);
+            this.DoctorExit.Size = new System.Drawing.Size(214, 28);
             this.DoctorExit.TabIndex = 3;
             this.DoctorExit.Text = "Log Out";
             this.DoctorExit.UseVisualStyleBackColor = true;
@@ -114,56 +153,43 @@ namespace HospitalManagementSystem
             this.DoctorInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DoctorInfo.Controls.Add(this.label4);
             this.DoctorInfo.Controls.Add(this.label6);
-            this.DoctorInfo.Location = new System.Drawing.Point(11, 146);
+            this.DoctorInfo.Location = new System.Drawing.Point(10, 110);
+            this.DoctorInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DoctorInfo.Name = "DoctorInfo";
-            this.DoctorInfo.Size = new System.Drawing.Size(288, 41);
+            this.DoctorInfo.Size = new System.Drawing.Size(252, 31);
             this.DoctorInfo.TabIndex = 3;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(131, 5);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 20);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Surgeon";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(131, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Saitama";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Speciality:";
+            this.DoctorInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.DoctorInfo_Paint);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 14);
+            this.label4.Location = new System.Drawing.Point(3, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 20);
+            this.label4.Size = new System.Drawing.Size(22, 15);
             this.label4.TabIndex = 1;
             this.label4.Text = "Dr:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(115, 10);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 15);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Saitama";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // DoctorLabel
             // 
             this.DoctorLabel.Font = new System.Drawing.Font("Nirmala UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.DoctorLabel.Location = new System.Drawing.Point(15, 21);
+            this.DoctorLabel.Location = new System.Drawing.Point(13, 16);
             this.DoctorLabel.Name = "DoctorLabel";
-            this.DoctorLabel.Size = new System.Drawing.Size(284, 88);
+            this.DoctorLabel.Size = new System.Drawing.Size(248, 66);
             this.DoctorLabel.TabIndex = 0;
             this.DoctorLabel.Text = "Doctor Panel";
             this.DoctorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DoctorLabel.Click += new System.EventHandler(this.DoctorLabel_Click);
             // 
             // panel4
             // 
@@ -178,65 +204,78 @@ namespace HospitalManagementSystem
             this.panel4.Controls.Add(this.listView1);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(313, 64);
+            this.panel4.Location = new System.Drawing.Point(274, 48);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1092, 606);
+            this.panel4.Size = new System.Drawing.Size(956, 454);
             this.panel4.TabIndex = 4;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // AptDelete
             // 
-            this.AptDelete.Location = new System.Drawing.Point(982, 562);
+            this.AptDelete.Location = new System.Drawing.Point(859, 422);
+            this.AptDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AptDelete.Name = "AptDelete";
-            this.AptDelete.Size = new System.Drawing.Size(94, 29);
+            this.AptDelete.Size = new System.Drawing.Size(82, 22);
             this.AptDelete.TabIndex = 10;
             this.AptDelete.Text = "Delete";
             this.AptDelete.UseVisualStyleBackColor = true;
+            this.AptDelete.Click += new System.EventHandler(this.AptDelete_Click);
             // 
             // AptUpdate
             // 
-            this.AptUpdate.Location = new System.Drawing.Point(492, 562);
+            this.AptUpdate.Location = new System.Drawing.Point(430, 422);
+            this.AptUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AptUpdate.Name = "AptUpdate";
-            this.AptUpdate.Size = new System.Drawing.Size(94, 29);
+            this.AptUpdate.Size = new System.Drawing.Size(82, 22);
             this.AptUpdate.TabIndex = 9;
             this.AptUpdate.Text = "Update";
             this.AptUpdate.UseVisualStyleBackColor = true;
+            this.AptUpdate.Click += new System.EventHandler(this.AptUpdate_Click);
             // 
             // AptAdd
             // 
-            this.AptAdd.Location = new System.Drawing.Point(26, 562);
+            this.AptAdd.Location = new System.Drawing.Point(23, 422);
+            this.AptAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AptAdd.Name = "AptAdd";
-            this.AptAdd.Size = new System.Drawing.Size(94, 29);
+            this.AptAdd.Size = new System.Drawing.Size(82, 22);
             this.AptAdd.TabIndex = 8;
             this.AptAdd.Text = "Add";
             this.AptAdd.UseVisualStyleBackColor = true;
+            this.AptAdd.Click += new System.EventHandler(this.AptAdd_Click);
             // 
             // PatientDelete
             // 
-            this.PatientDelete.Location = new System.Drawing.Point(982, 256);
+            this.PatientDelete.Location = new System.Drawing.Point(859, 192);
+            this.PatientDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PatientDelete.Name = "PatientDelete";
-            this.PatientDelete.Size = new System.Drawing.Size(94, 29);
+            this.PatientDelete.Size = new System.Drawing.Size(82, 22);
             this.PatientDelete.TabIndex = 7;
             this.PatientDelete.Text = "Delete";
             this.PatientDelete.UseVisualStyleBackColor = true;
+            this.PatientDelete.Click += new System.EventHandler(this.PatientDelete_Click);
             // 
             // PatientUpdate
             // 
-            this.PatientUpdate.Location = new System.Drawing.Point(492, 256);
+            this.PatientUpdate.Location = new System.Drawing.Point(430, 192);
+            this.PatientUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PatientUpdate.Name = "PatientUpdate";
-            this.PatientUpdate.Size = new System.Drawing.Size(94, 29);
+            this.PatientUpdate.Size = new System.Drawing.Size(82, 22);
             this.PatientUpdate.TabIndex = 6;
             this.PatientUpdate.Text = "Update";
             this.PatientUpdate.UseVisualStyleBackColor = true;
+            this.PatientUpdate.Click += new System.EventHandler(this.PatientUpdate_Click);
             // 
             // PatientAdd
             // 
-            this.PatientAdd.Location = new System.Drawing.Point(26, 256);
+            this.PatientAdd.Location = new System.Drawing.Point(23, 192);
+            this.PatientAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PatientAdd.Name = "PatientAdd";
-            this.PatientAdd.Size = new System.Drawing.Size(94, 29);
+            this.PatientAdd.Size = new System.Drawing.Size(82, 22);
             this.PatientAdd.TabIndex = 5;
             this.PatientAdd.Text = "Add";
             this.PatientAdd.UseVisualStyleBackColor = true;
+            this.PatientAdd.Click += new System.EventHandler(this.PatientAdd_Click);
             // 
             // listView2
             // 
@@ -247,18 +286,25 @@ namespace HospitalManagementSystem
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
+            this.listView2.GridLines = true;
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(26, 356);
+            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2});
+            this.listView2.Location = new System.Drawing.Point(23, 267);
+            this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(1050, 193);
+            this.listView2.Size = new System.Drawing.Size(919, 146);
             this.listView2.TabIndex = 4;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
+            this.columnHeader1.Tag = "";
             this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 200;
+            this.columnHeader1.Width = 150;
             // 
             // columnHeader2
             // 
@@ -278,6 +324,11 @@ namespace HospitalManagementSystem
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader4.Width = 200;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Patient Name";
+            this.columnHeader5.Width = 165;
+            // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.SystemColors.Info;
@@ -287,18 +338,21 @@ namespace HospitalManagementSystem
             this.PatientSurname,
             this.PatientNumber,
             this.Status});
+            this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(26, 63);
+            this.listView1.Location = new System.Drawing.Point(23, 47);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1050, 177);
+            this.listView1.Size = new System.Drawing.Size(919, 134);
             this.listView1.TabIndex = 3;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // PatientId
             // 
             this.PatientId.Text = "ID";
-            this.PatientId.Width = 200;
+            this.PatientId.Width = 115;
             // 
             // PatientName
             // 
@@ -327,64 +381,47 @@ namespace HospitalManagementSystem
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(426, 313);
+            this.label3.Location = new System.Drawing.Point(373, 235);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 31);
+            this.label3.Size = new System.Drawing.Size(182, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Appointment List";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(445, 21);
+            this.label2.Location = new System.Drawing.Point(389, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 29);
+            this.label2.Size = new System.Drawing.Size(145, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "Patient List";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.Info;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(11, 184);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(288, 37);
-            this.panel5.TabIndex = 4;
-            // 
-            // DoctorEdit
-            // 
-            this.DoctorEdit.Location = new System.Drawing.Point(48, 256);
-            this.DoctorEdit.Name = "DoctorEdit";
-            this.DoctorEdit.Size = new System.Drawing.Size(201, 45);
-            this.DoctorEdit.TabIndex = 11;
-            this.DoctorEdit.Text = "Edit Personal Info";
-            this.DoctorEdit.UseVisualStyleBackColor = true;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // DoctorPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1407, 734);
+            this.ClientSize = new System.Drawing.Size(1231, 550);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DoctorPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doctor Panel";
             this.Load += new System.EventHandler(this.DoctorPanel_Load);
             this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.DoctorInfo.ResumeLayout(false);
             this.DoctorInfo.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -422,7 +459,6 @@ namespace HospitalManagementSystem
         private System.Windows.Forms.ColumnHeader PatientSurname;
         private System.Windows.Forms.ColumnHeader PatientNumber;
         private System.Windows.Forms.ColumnHeader Status;
-        private System.Windows.Forms.Button DoctorEdit;
         private System.Windows.Forms.Panel panel5;
     }
 }
