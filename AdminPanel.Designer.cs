@@ -53,6 +53,8 @@ namespace HospitalManagementSystem
             this.DoctorEdit = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.docID = new System.Windows.Forms.TextBox();
+            this.patPassword = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.patDisease = new System.Windows.Forms.TextBox();
             this.patBloodGroup = new System.Windows.Forms.ComboBox();
@@ -67,8 +69,6 @@ namespace HospitalManagementSystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.patPassword = new System.Windows.Forms.TextBox();
-            this.docID = new System.Windows.Forms.TextBox();
             this.DoctorInfo.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -309,6 +309,34 @@ namespace HospitalManagementSystem
             this.panel3.Size = new System.Drawing.Size(311, 605);
             this.panel3.TabIndex = 7;
             // 
+            // docID
+            // 
+            this.docID.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.docID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.docID.BackColor = System.Drawing.Color.Gainsboro;
+            this.docID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.docID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.docID.Location = new System.Drawing.Point(147, 367);
+            this.docID.Name = "docID";
+            this.docID.Size = new System.Drawing.Size(151, 26);
+            this.docID.TabIndex = 34;
+            this.docID.Text = "DOCTOR ID";
+            this.docID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // patPassword
+            // 
+            this.patPassword.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.patPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.patPassword.BackColor = System.Drawing.Color.Gainsboro;
+            this.patPassword.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.patPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.patPassword.Location = new System.Drawing.Point(147, 335);
+            this.patPassword.Name = "patPassword";
+            this.patPassword.Size = new System.Drawing.Size(151, 26);
+            this.patPassword.TabIndex = 33;
+            this.patPassword.Text = "PATIENT PASSWORD";
+            this.patPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(10, 479);
@@ -317,6 +345,7 @@ namespace HospitalManagementSystem
             this.button2.TabIndex = 32;
             this.button2.Text = "See Doctor List";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // patDisease
             // 
@@ -496,34 +525,6 @@ namespace HospitalManagementSystem
             this.dataGridView1.Size = new System.Drawing.Size(1050, 244);
             this.dataGridView1.TabIndex = 19;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // patPassword
-            // 
-            this.patPassword.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.patPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.patPassword.BackColor = System.Drawing.Color.Gainsboro;
-            this.patPassword.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.patPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.patPassword.Location = new System.Drawing.Point(147, 335);
-            this.patPassword.Name = "patPassword";
-            this.patPassword.Size = new System.Drawing.Size(151, 26);
-            this.patPassword.TabIndex = 33;
-            this.patPassword.Text = "PATIENT PASSWORD";
-            this.patPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // docID
-            // 
-            this.docID.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.docID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.docID.BackColor = System.Drawing.Color.Gainsboro;
-            this.docID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.docID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.docID.Location = new System.Drawing.Point(147, 367);
-            this.docID.Name = "docID";
-            this.docID.Size = new System.Drawing.Size(151, 26);
-            this.docID.TabIndex = 34;
-            this.docID.Text = "DOCTOR ID";
-            this.docID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AdminPanel
             // 

@@ -73,26 +73,15 @@ namespace HospitalManagementSystem
             {
                 Con.Open();
 
-                // chking non duplicat ID
-
-                SqlDataAdapter sda = new SqlDataAdapter("select Count(*) from PatientTable where patID = '" + patID.Text + "'", Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                if (dt.Rows[0][0].ToString() == "1")
-                {
-                    MessageBox.Show("canNot update ID with an existing one");
-
-                }
-                else
-                {
+               
+               
                     string query = "update PatientTable set patName = '" + patName.Text + "', patAddress = '" + patAddress.Text + "', patPhone = '" + patPhone.Text + "',patAge = " + patAge.Text + ", patGender = '" + patGender.SelectedItem.ToString() + "',patBloodGroup= '" + patBloodGroup.SelectedItem.ToString() + "', patDisease = '" + patDisease.Text + "' where patID = " + patID.Text + "";
                     SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Patient successfully updated");
                     Con.Close();
                     populate();
-                }
+                
             }
         }
 
@@ -169,6 +158,12 @@ namespace HospitalManagementSystem
                 patPassword.Text = dataGridView1.CurrentRow.Cells["patPassword"].Value.ToString();
                 docID.Text = dataGridView1.CurrentRow.Cells["docID"].Value.ToString();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new AdminDoctorList().Show();
         }
     }
 }
