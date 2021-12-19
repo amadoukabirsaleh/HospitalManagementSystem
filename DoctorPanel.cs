@@ -152,8 +152,21 @@ namespace HospitalManagementSystem
 
         private void PatientUpdate_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new AdminUpdatePanel().Show();
+            if (patID.Text == "" || patName.Text == "" || patAddress.Text == "" || patPhone.Text == "" || patAge.Text == "" || patDisease.Text == "")
+            {
+                MessageBox.Show("No empty field accepted");
+
+            }
+            else
+            {
+                Con.Open();
+                string query = "update PatientTable set patName = '" + patName.Text + "', patAddress = '" + patAddress.Text + "', patPhone = '" + patPhone.Text + "',patAge = " + patAge.Text + ", patGender = '" + patGender.SelectedItem.ToString() + "',patBloodGroup= '" + patBloodGroup.SelectedItem.ToString() + "', patDisease = '" + patDisease.Text + "' where patID = " + patID.Text + "";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Patient successfully updated");
+                Con.Close();
+                populate();
+            }
         }
 
         private void PatientAdd_Click(object sender, EventArgs e)
@@ -180,6 +193,24 @@ namespace HospitalManagementSystem
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.RowCount > 0)
+            {
+
+
+                patID.Text = dataGridView1.CurrentRow.Cells["patID"].Value.ToString();
+                patName.Text = dataGridView1.CurrentRow.Cells["patName"].Value.ToString();
+                patAddress.Text = dataGridView1.CurrentRow.Cells["patAddress"].Value.ToString();
+                patPhone.Text = dataGridView1.CurrentRow.Cells["patPhone"].Value.ToString();
+
+                patAge.Text = dataGridView1.CurrentRow.Cells["patAge"].Value.ToString();
+                patGender.Text = dataGridView1.CurrentRow.Cells["patGender"].Value.ToString();
+                patBloodGroup.Text = dataGridView1.CurrentRow.Cells["patBloodGroup"].Value.ToString();
+                patDisease.Text = dataGridView1.CurrentRow.Cells["patDisease"].Value.ToString();
+            }
         }
     }
 }

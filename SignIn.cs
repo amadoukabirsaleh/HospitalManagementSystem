@@ -47,7 +47,8 @@ namespace HospitalManagementSystem
 
         private void exitLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            new MainBoard().Show();
 
         }
 
@@ -77,6 +78,11 @@ namespace HospitalManagementSystem
                DataTable dt1 = new DataTable();
                sda1.Fill(dt1);
 
+                //For admins
+                SqlDataAdapter sda2 = new SqlDataAdapter("select Count(*) from AdminTable where adminName = '" + uName.Text + "' AND adminPass = '" + Password.Text + "'", Con);
+                DataTable dt2 = new DataTable();
+                sda2.Fill(dt2);
+
                 if (dt.Rows[0][0].ToString() == "1")
                 {
                     username = uName.Text;
@@ -89,6 +95,13 @@ namespace HospitalManagementSystem
                     username = uName.Text;
                     DoctorPanel d = new DoctorPanel();
                     d.Show();
+                    this.Hide();
+                }
+                else if (dt2.Rows[0][0].ToString() == "1")
+                {
+                    username = uName.Text;
+                    AdminPanel a = new AdminPanel();
+                    a.Show();
                     this.Hide();
                 }
                 else
