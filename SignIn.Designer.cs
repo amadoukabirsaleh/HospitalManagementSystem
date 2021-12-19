@@ -46,75 +46,70 @@ namespace HospitalManagementSystem
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 48);
+            this.panel1.Size = new System.Drawing.Size(299, 64);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Crimson;
-            this.panel2.Location = new System.Drawing.Point(0, 351);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 468);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(262, 48);
+            this.panel2.Size = new System.Drawing.Size(299, 64);
             this.panel2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(61, 50);
+            this.label1.Location = new System.Drawing.Point(70, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 46);
+            this.label1.Size = new System.Drawing.Size(162, 61);
             this.label1.TabIndex = 2;
             this.label1.Text = "Get Started";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(88, 175);
+            this.label2.Location = new System.Drawing.Point(101, 233);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 15);
+            this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(88, 114);
+            this.label3.Location = new System.Drawing.Point(101, 152);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 17);
+            this.label3.Size = new System.Drawing.Size(94, 23);
             this.label3.TabIndex = 4;
             this.label3.Text = "Username:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // uName
             // 
-            this.uName.Location = new System.Drawing.Point(46, 134);
-            this.uName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uName.Location = new System.Drawing.Point(53, 179);
             this.uName.Multiline = true;
             this.uName.Name = "uName";
-            this.uName.Size = new System.Drawing.Size(171, 23);
+            this.uName.Size = new System.Drawing.Size(195, 29);
             this.uName.TabIndex = 5;
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(46, 192);
-            this.Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Password.Location = new System.Drawing.Point(53, 256);
             this.Password.Multiline = true;
             this.Password.Name = "Password";
             this.Password.PasswordChar = '•';
-            this.Password.Size = new System.Drawing.Size(171, 23);
+            this.Password.Size = new System.Drawing.Size(195, 29);
             this.Password.TabIndex = 6;
             this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // signinButton
             // 
             this.signinButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.signinButton.Location = new System.Drawing.Point(61, 292);
-            this.signinButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.signinButton.Location = new System.Drawing.Point(70, 389);
             this.signinButton.Name = "signinButton";
-            this.signinButton.Size = new System.Drawing.Size(155, 34);
+            this.signinButton.Size = new System.Drawing.Size(177, 45);
             this.signinButton.TabIndex = 7;
             this.signinButton.Text = "Sign In";
             this.signinButton.UseVisualStyleBackColor = true;
@@ -126,9 +121,9 @@ namespace HospitalManagementSystem
             this.exitLink.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exitLink.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.exitLink.LinkColor = System.Drawing.Color.Black;
-            this.exitLink.Location = new System.Drawing.Point(232, 330);
+            this.exitLink.Location = new System.Drawing.Point(265, 440);
             this.exitLink.Name = "exitLink";
-            this.exitLink.Size = new System.Drawing.Size(30, 19);
+            this.exitLink.Size = new System.Drawing.Size(37, 23);
             this.exitLink.TabIndex = 8;
             this.exitLink.TabStop = true;
             this.exitLink.Text = "Exit";
@@ -141,9 +136,9 @@ namespace HospitalManagementSystem
             this.forgotPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.forgotPass.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.forgotPass.LinkColor = System.Drawing.Color.Black;
-            this.forgotPass.Location = new System.Drawing.Point(61, 256);
+            this.forgotPass.Location = new System.Drawing.Point(70, 341);
             this.forgotPass.Name = "forgotPass";
-            this.forgotPass.Size = new System.Drawing.Size(147, 22);
+            this.forgotPass.Size = new System.Drawing.Size(168, 29);
             this.forgotPass.TabIndex = 9;
             this.forgotPass.TabStop = true;
             this.forgotPass.Text = "Forgotten Password?";
@@ -153,10 +148,9 @@ namespace HospitalManagementSystem
             // showPass
             // 
             this.showPass.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.showPass.Location = new System.Drawing.Point(72, 218);
-            this.showPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.showPass.Location = new System.Drawing.Point(82, 291);
             this.showPass.Name = "showPass";
-            this.showPass.Size = new System.Drawing.Size(116, 17);
+            this.showPass.Size = new System.Drawing.Size(133, 23);
             this.showPass.TabIndex = 10;
             this.showPass.Text = "Show Password";
             this.showPass.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -165,10 +159,10 @@ namespace HospitalManagementSystem
             // 
             // SignIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.ClientSize = new System.Drawing.Size(262, 398);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(299, 531);
             this.Controls.Add(this.showPass);
             this.Controls.Add(this.forgotPass);
             this.Controls.Add(this.exitLink);
@@ -181,7 +175,6 @@ namespace HospitalManagementSystem
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

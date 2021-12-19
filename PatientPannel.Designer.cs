@@ -42,10 +42,13 @@ namespace HospitalManagementSystem
             this.patGender = new System.Windows.Forms.ComboBox();
             this.patBloodGroup = new System.Windows.Forms.ComboBox();
             this.patDisease = new System.Windows.Forms.TextBox();
-            this.updatePat = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.printDocument = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,8 +57,6 @@ namespace HospitalManagementSystem
             this.patientSymptomlbl = new System.Windows.Forms.Label();
             this.patientNamelbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.addPat = new System.Windows.Forms.Button();
-            this.deletePat = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -68,10 +69,6 @@ namespace HospitalManagementSystem
             this.label19 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -261,27 +258,14 @@ namespace HospitalManagementSystem
             this.patDisease.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.patDisease.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // updatePat
-            // 
-            this.updatePat.BackColor = System.Drawing.Color.Crimson;
-            this.updatePat.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.updatePat.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.updatePat.Location = new System.Drawing.Point(20, 590);
-            this.updatePat.Name = "updatePat";
-            this.updatePat.Size = new System.Drawing.Size(105, 46);
-            this.updatePat.TabIndex = 11;
-            this.updatePat.Text = "Update";
-            this.updatePat.UseVisualStyleBackColor = false;
-            this.updatePat.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Crimson;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(45, 527);
+            this.button2.Location = new System.Drawing.Point(117, 513);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 46);
+            this.button2.Size = new System.Drawing.Size(167, 46);
             this.button2.TabIndex = 12;
             this.button2.Text = "Appointment";
             this.button2.UseVisualStyleBackColor = false;
@@ -292,11 +276,11 @@ namespace HospitalManagementSystem
             this.button3.BackColor = System.Drawing.Color.Crimson;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(182, 527);
+            this.button3.Location = new System.Drawing.Point(20, 598);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 46);
+            this.button3.Size = new System.Drawing.Size(373, 37);
             this.button3.TabIndex = 13;
-            this.button3.Text = "EXIT";
+            this.button3.Text = "Log out";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -319,6 +303,54 @@ namespace HospitalManagementSystem
             this.panel2.Size = new System.Drawing.Size(962, 314);
             this.panel2.TabIndex = 14;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.Color.Crimson;
+            this.label20.Location = new System.Drawing.Point(420, 140);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(118, 24);
+            this.label20.TabIndex = 15;
+            this.label20.Text = "MEDECINES :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.Crimson;
+            this.label7.Location = new System.Drawing.Point(430, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 24);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "DIAGNOSIS :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Crimson;
+            this.label6.Location = new System.Drawing.Point(143, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 24);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "SYMPTOMS :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.Crimson;
+            this.label5.Location = new System.Drawing.Point(116, 80);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(142, 24);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "PATIENT NAME :";
             // 
             // printDocument
             // 
@@ -420,32 +452,6 @@ namespace HospitalManagementSystem
             this.label3.Text = "DIAGNOSIS SUMMARY";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // addPat
-            // 
-            this.addPat.BackColor = System.Drawing.Color.Crimson;
-            this.addPat.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.addPat.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.addPat.Location = new System.Drawing.Point(131, 590);
-            this.addPat.Name = "addPat";
-            this.addPat.Size = new System.Drawing.Size(105, 46);
-            this.addPat.TabIndex = 15;
-            this.addPat.Text = "Add";
-            this.addPat.UseVisualStyleBackColor = false;
-            this.addPat.Click += new System.EventHandler(this.button4_Click_1);
-            // 
-            // deletePat
-            // 
-            this.deletePat.BackColor = System.Drawing.Color.Crimson;
-            this.deletePat.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.deletePat.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.deletePat.Location = new System.Drawing.Point(242, 590);
-            this.deletePat.Name = "deletePat";
-            this.deletePat.Size = new System.Drawing.Size(105, 46);
-            this.deletePat.TabIndex = 16;
-            this.deletePat.Text = "Delete";
-            this.deletePat.UseVisualStyleBackColor = false;
-            this.deletePat.Click += new System.EventHandler(this.deletePat_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -462,7 +468,7 @@ namespace HospitalManagementSystem
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(990, 146);
+            this.dataGridView1.Size = new System.Drawing.Size(962, 146);
             this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -573,60 +579,12 @@ namespace HospitalManagementSystem
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Crimson;
-            this.label5.Location = new System.Drawing.Point(116, 80);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 24);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "PATIENT NAME :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.Crimson;
-            this.label6.Location = new System.Drawing.Point(143, 142);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 24);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "SYMPTOMS :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.Crimson;
-            this.label7.Location = new System.Drawing.Point(430, 80);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(111, 24);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "DIAGNOSIS :";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.ForeColor = System.Drawing.Color.Crimson;
-            this.label20.Location = new System.Drawing.Point(420, 140);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(118, 24);
-            this.label20.TabIndex = 15;
-            this.label20.Text = "MEDECINES :";
-            // 
             // PatientPannel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1402, 742);
+            this.ClientSize = new System.Drawing.Size(1402, 647);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
@@ -637,12 +595,9 @@ namespace HospitalManagementSystem
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.deletePat);
-            this.Controls.Add(this.addPat);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.updatePat);
             this.Controls.Add(this.patDisease);
             this.Controls.Add(this.patBloodGroup);
             this.Controls.Add(this.patGender);
@@ -679,7 +634,6 @@ namespace HospitalManagementSystem
         private System.Windows.Forms.ComboBox patGender;
         private System.Windows.Forms.ComboBox patBloodGroup;
         private System.Windows.Forms.TextBox patDisease;
-        private System.Windows.Forms.Button updatePat;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
@@ -690,8 +644,6 @@ namespace HospitalManagementSystem
         private System.Windows.Forms.Label patientMedecinelbl;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button addPat;
-        private System.Windows.Forms.Button deletePat;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;

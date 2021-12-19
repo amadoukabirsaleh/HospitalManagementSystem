@@ -22,6 +22,8 @@ namespace HospitalManagementSystem
 
         private void PatientAdd_Click(object sender, EventArgs e)
         {
+            Con.Open();
+
             if (patID.Text == "" || patName.Text == "" || patAddress.Text == "" || patPhone.Text == "" || patAge.Text == "" || patDisease.Text == "" || patPassword.Text=="" || docID.Text=="")
                 
             {
@@ -31,14 +33,26 @@ namespace HospitalManagementSystem
 
             else
             {
-                Con.Open();
-                // string query  = "insert into PatientTable(
-                string query = "insert into PatientTable values (" + patID.Text + ", '" + patName.Text + "','" + patAddress.Text + "', '" + patPhone.Text + "', " + patAge.Text + " ,'" + patGender.SelectedItem.ToString() + "', '" + patBloodGroup.SelectedItem.ToString() + "', '" + patDisease.Text + "' , '"+patPassword.Text + "', "+docID.Text+")";
-                SqlCommand cmd = new SqlCommand(query, Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Patient Successfully Added");
-                Con.Close();
-                populate();
+                // chking non duplicat ID
+
+                SqlDataAdapter sda = new SqlDataAdapter("select Count(*) from PatientTable where patID = '" + patID.Text + "'", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    MessageBox.Show("Patient with same ID canNot be added");
+                    
+                }
+                else {
+
+                    string query = "insert into PatientTable values (" + patID.Text + ", '" + patName.Text + "','" + patAddress.Text + "', '" + patPhone.Text + "', " + patAge.Text + " ,'" + patGender.SelectedItem.ToString() + "', '" + patBloodGroup.SelectedItem.ToString() + "', '" + patDisease.Text + "' , '" + patPassword.Text + "', " + docID.Text + ")";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Patient Successfully Added");
+                    Con.Close();
+                    populate();
+                }
             }
         }
 
@@ -58,12 +72,27 @@ namespace HospitalManagementSystem
             else
             {
                 Con.Open();
-                string query = "update PatientTable set patName = '" + patName.Text + "', patAddress = '" + patAddress.Text + "', patPhone = '" + patPhone.Text + "',patAge = " + patAge.Text + ", patGender = '" + patGender.SelectedItem.ToString() + "',patBloodGroup= '" + patBloodGroup.SelectedItem.ToString() + "', patDisease = '" + patDisease.Text + "' where patID = " + patID.Text + "";
-                SqlCommand cmd = new SqlCommand(query, Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Patient successfully updated");
-                Con.Close();
-                populate();
+
+                // chking non duplicat ID
+
+                SqlDataAdapter sda = new SqlDataAdapter("select Count(*) from PatientTable where patID = '" + patID.Text + "'", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows[0][0].ToString() == "1")
+                {
+                    MessageBox.Show("canNot update ID with an existing one");
+
+                }
+                else
+                {
+                    string query = "update PatientTable set patName = '" + patName.Text + "', patAddress = '" + patAddress.Text + "', patPhone = '" + patPhone.Text + "',patAge = " + patAge.Text + ", patGender = '" + patGender.SelectedItem.ToString() + "',patBloodGroup= '" + patBloodGroup.SelectedItem.ToString() + "', patDisease = '" + patDisease.Text + "' where patID = " + patID.Text + "";
+                    SqlCommand cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Patient successfully updated");
+                    Con.Close();
+                    populate();
+                }
             }
         }
 

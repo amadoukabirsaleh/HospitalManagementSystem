@@ -9,17 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace HospitalManagementSystem
 {
-    public partial class SignIn : Form
+    public partial class SignInDoc : Form
     {
         public static string username = "";
 
-        public SignIn()
+        public SignInDoc()
         {
             InitializeComponent();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LENOVO\Documents\HMSdb.mdf;Integrated Security=True;Connect Timeout=30");
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         private void showPass_CheckedChanged(object sender, EventArgs e)
         {
@@ -34,11 +40,6 @@ namespace HospitalManagementSystem
             }
         }
 
-        private void Password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void forgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
@@ -49,45 +50,40 @@ namespace HospitalManagementSystem
         {
             this.Hide();
             new MainBoard().Show();
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void signinButton_Click(object sender, EventArgs e)
         {
+
 
             if (uName.Text == "" || Password.Text == "")
             {
                 MessageBox.Show("Enter a Username and a Password");
             }
 
-            else 
+            else
             {
                 Con.Open();
-                //For patients
-                SqlDataAdapter sda = new SqlDataAdapter("select Count(*) from PatientTable where patName = '"+ uName.Text + "' AND patPassword = '" + Password.Text + "'",Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+               
 
-             
+                //For doctors
+                SqlDataAdapter sda1 = new SqlDataAdapter("select Count(*) from DoctorTable where docName = '" + uName.Text + "' AND docPass = '" + Password.Text + "'", Con);
+                DataTable dt1 = new DataTable();
+                sda1.Fill(dt1);
 
                 //For admins
                 SqlDataAdapter sda2 = new SqlDataAdapter("select Count(*) from AdminTable where adminName = '" + uName.Text + "' AND adminPass = '" + Password.Text + "'", Con);
                 DataTable dt2 = new DataTable();
                 sda2.Fill(dt2);
 
-                if (dt.Rows[0][0].ToString() == "1")
+               
+                 if (dt1.Rows[0][0].ToString() == "1")
                 {
                     username = uName.Text;
-                    PatientPannel P = new PatientPannel();
-                    P.Show();
+                    DoctorPanel d = new DoctorPanel();
+                    d.Show();
                     this.Hide();
                 }
-             
                 else if (dt2.Rows[0][0].ToString() == "1")
                 {
                     username = uName.Text;
@@ -102,14 +98,8 @@ namespace HospitalManagementSystem
                     Password.Text = "";
                     Con.Close();
                 }
-              //  this.Hide();
-              //  new PatientPannel().Show();
+           
             }
-        }
-
-        private void SignIn_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
