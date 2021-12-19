@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSystem
 {
-    public partial class AdminUpdatePanel : Form
+    public partial class AptUpdate : Form
     {
-        public AdminUpdatePanel()
+        public AptUpdate()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MessageBox.Show("Done");
-            new AdminPanel().Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
