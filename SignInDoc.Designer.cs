@@ -177,6 +177,7 @@ namespace HospitalManagementSystem
             this.Name = "SignInDoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignInDoc";
+            this.Load += new System.EventHandler(this.SignInDoc_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

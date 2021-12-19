@@ -165,5 +165,11 @@ namespace HospitalManagementSystem
             this.Hide();
             new AdminDoctorList().Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Appointment().Show();
+        }
     }
 }

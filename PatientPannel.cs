@@ -170,13 +170,7 @@ namespace HospitalManagementSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Con.Open();
-            string query = "update PatientTable set patName = '" + patName.Text + "', patAddress = '" + patAddress.Text + "', patPhone = '" + patPhone.Text + "',patAge = " + patAge.Text + ", patGender = '" + patGender.SelectedItem.ToString() + "',patBloodGroup= '" + patBloodGroup.SelectedItem.ToString() + "', patDisease = '" + patDisease.Text + "' where patID = " + patID.Text + "";
-            SqlCommand cmd = new SqlCommand(query, Con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Patient successfully updated");
-            Con.Close();
-            //populate();
+        
 
         }
 
@@ -250,22 +244,7 @@ namespace HospitalManagementSystem
         private void button4_Click_1(object sender, EventArgs e)
         {
 
-            if (patID.Text == "" || patName.Text == "" || patAddress.Text == "" || patPhone.Text == "" || patAge.Text == "" || patDisease.Text == "")
-            {
-                MessageBox.Show("No empty field accepted");
-
-            }
-
-            else {
-                Con.Open();
-               // string query  = "insert into PatientTable(
-                string query = "insert into PatientTable values (" + patID.Text + ", '" + patName.Text + "','" + patAddress.Text + "', '" + patPhone.Text + "', "+patAge.Text+" ,'" + patGender.SelectedItem.ToString() + "', '" + patBloodGroup.SelectedItem.ToString() + "', '" + patDisease.Text + "' )";
-            SqlCommand cmd = new SqlCommand(query, Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Patient Successfully Added");
-                Con.Close();
-                //populate();
-            }
+           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -275,20 +254,7 @@ namespace HospitalManagementSystem
 
         private void deletePat_Click(object sender, EventArgs e)
         {
-            if(patID.Text == "")
-            {
-                MessageBox.Show("Enter the patient ID");
-            }
-            else
-            {
-                Con.Open();
-                string query = "delete from PatientTable where patID=" + patID.Text + "";
-                SqlCommand cmd = new SqlCommand(query, Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Patient Successfully Deleted");
-                Con.Close();
-
-            }
+          
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

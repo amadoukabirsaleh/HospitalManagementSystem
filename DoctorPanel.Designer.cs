@@ -29,8 +29,6 @@ namespace HospitalManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("bruhhh");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("damn");
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,17 +57,9 @@ namespace HospitalManagementSystem
             this.DoctorLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.AptDelete = new System.Windows.Forms.Button();
-            this.AptUpdate = new System.Windows.Forms.Button();
-            this.AptAdd = new System.Windows.Forms.Button();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -77,6 +67,7 @@ namespace HospitalManagementSystem
             this.DoctorInfo.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -403,11 +394,8 @@ namespace HospitalManagementSystem
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Controls.Add(this.dataGridView2);
             this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Controls.Add(this.AptDelete);
-            this.panel4.Controls.Add(this.AptUpdate);
-            this.panel4.Controls.Add(this.AptAdd);
-            this.panel4.Controls.Add(this.listView2);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(313, 64);
@@ -436,87 +424,6 @@ namespace HospitalManagementSystem
             this.dataGridView1.TabIndex = 18;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // AptDelete
-            // 
-            this.AptDelete.Location = new System.Drawing.Point(982, 563);
-            this.AptDelete.Name = "AptDelete";
-            this.AptDelete.Size = new System.Drawing.Size(94, 29);
-            this.AptDelete.TabIndex = 10;
-            this.AptDelete.Text = "Delete";
-            this.AptDelete.UseVisualStyleBackColor = true;
-            this.AptDelete.Click += new System.EventHandler(this.AptDelete_Click);
-            // 
-            // AptUpdate
-            // 
-            this.AptUpdate.Location = new System.Drawing.Point(491, 563);
-            this.AptUpdate.Name = "AptUpdate";
-            this.AptUpdate.Size = new System.Drawing.Size(94, 29);
-            this.AptUpdate.TabIndex = 9;
-            this.AptUpdate.Text = "Update";
-            this.AptUpdate.UseVisualStyleBackColor = true;
-            this.AptUpdate.Click += new System.EventHandler(this.AptUpdate_Click);
-            // 
-            // AptAdd
-            // 
-            this.AptAdd.Location = new System.Drawing.Point(26, 563);
-            this.AptAdd.Name = "AptAdd";
-            this.AptAdd.Size = new System.Drawing.Size(94, 29);
-            this.AptAdd.TabIndex = 8;
-            this.AptAdd.Text = "Add";
-            this.AptAdd.UseVisualStyleBackColor = true;
-            this.AptAdd.Click += new System.EventHandler(this.AptAdd_Click);
-            // 
-            // listView2
-            // 
-            this.listView2.BackColor = System.Drawing.SystemColors.Info;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.listView2.GridLines = true;
-            this.listView2.HideSelection = false;
-            this.listView2.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2});
-            this.listView2.Location = new System.Drawing.Point(26, 356);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(1050, 193);
-            this.listView2.TabIndex = 4;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Tag = "";
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 150;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Date";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 200;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Time";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 200;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Patient ID";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 200;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Patient Name";
-            this.columnHeader5.Width = 165;
-            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
@@ -538,6 +445,25 @@ namespace HospitalManagementSystem
             this.label2.Text = "Patient List";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToResizeColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(26, 366);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 29;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(1050, 191);
+            this.dataGridView2.TabIndex = 19;
             // 
             // DoctorPanel
             // 
@@ -566,6 +492,7 @@ namespace HospitalManagementSystem
             this.DoctorInfo.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -581,20 +508,11 @@ namespace HospitalManagementSystem
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label DoctorLabel;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button AptUpdate;
-        private System.Windows.Forms.Button AptAdd;
         private System.Windows.Forms.Button PatientUpdate;
-        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button AptDelete;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel6;
@@ -611,5 +529,6 @@ namespace HospitalManagementSystem
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox patDiseas;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

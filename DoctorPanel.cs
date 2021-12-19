@@ -21,7 +21,7 @@ namespace HospitalManagementSystem
 
         private void DoctorPanel_Load(object sender, EventArgs e)
         {
-            label6.Text = SignIn.username;
+            label6.Text = SignInDoc.username;
 
             //Doc ID displaying
             Con.Open();
@@ -46,6 +46,7 @@ namespace HospitalManagementSystem
 
 
             populate();
+            populateApt();
         }
 
         void populate()
@@ -59,6 +60,21 @@ namespace HospitalManagementSystem
             dataGridView1.DataSource = ds.Tables[0];
             this.dataGridView1.Columns["docID"].Visible = false;
             this.dataGridView1.Columns["patPassword"].Visible = false;
+
+
+            Con.Close();
+        }
+
+        void populateApt()
+        {
+            Con.Open();
+            string query = "select *from AppointmentTable where docID = " + label8.Text + "";
+            SqlDataAdapter da = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dataGridView2.DataSource = ds.Tables[0];
+           
 
 
             Con.Close();
@@ -171,8 +187,7 @@ namespace HospitalManagementSystem
 
         private void PatientAdd_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new PatientListView().Show();
+            
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)

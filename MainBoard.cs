@@ -31,7 +31,7 @@ namespace HospitalManagementSystem
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            SignIn s = new SignIn();
+            SignInDoc s = new SignInDoc();
             s.Show();
             this.Hide();
         }
