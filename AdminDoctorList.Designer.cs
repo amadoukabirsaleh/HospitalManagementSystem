@@ -43,6 +43,8 @@ namespace HospitalManagementSystem
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.DoctorExit = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +56,7 @@ namespace HospitalManagementSystem
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1033, 67);
+            this.panel1.Size = new System.Drawing.Size(1407, 67);
             this.panel1.TabIndex = 17;
             // 
             // label10
@@ -63,7 +65,7 @@ namespace HospitalManagementSystem
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Arial Narrow", 19.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.LightCyan;
-            this.label10.Location = new System.Drawing.Point(283, 15);
+            this.label10.Location = new System.Drawing.Point(442, 10);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(466, 37);
             this.label10.TabIndex = 3;
@@ -72,17 +74,17 @@ namespace HospitalManagementSystem
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Crimson;
-            this.panel2.Location = new System.Drawing.Point(0, 488);
+            this.panel2.Location = new System.Drawing.Point(0, 617);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1033, 67);
+            this.panel2.Size = new System.Drawing.Size(1407, 115);
             this.panel2.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(450, 89);
+            this.label1.Location = new System.Drawing.Point(700, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(373, 42);
             this.label1.TabIndex = 19;
@@ -99,13 +101,13 @@ namespace HospitalManagementSystem
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(255, 149);
+            this.dataGridView1.Location = new System.Drawing.Point(389, 149);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(766, 278);
+            this.dataGridView1.Size = new System.Drawing.Size(985, 404);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -116,7 +118,7 @@ namespace HospitalManagementSystem
             this.docPass.BackColor = System.Drawing.Color.Gainsboro;
             this.docPass.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.docPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.docPass.Location = new System.Drawing.Point(36, 309);
+            this.docPass.Location = new System.Drawing.Point(93, 428);
             this.docPass.Name = "docPass";
             this.docPass.Size = new System.Drawing.Size(170, 26);
             this.docPass.TabIndex = 32;
@@ -130,7 +132,7 @@ namespace HospitalManagementSystem
             this.docSpecialty.BackColor = System.Drawing.Color.Gainsboro;
             this.docSpecialty.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.docSpecialty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.docSpecialty.Location = new System.Drawing.Point(36, 259);
+            this.docSpecialty.Location = new System.Drawing.Point(93, 378);
             this.docSpecialty.Name = "docSpecialty";
             this.docSpecialty.Size = new System.Drawing.Size(170, 26);
             this.docSpecialty.TabIndex = 31;
@@ -144,7 +146,7 @@ namespace HospitalManagementSystem
             this.docPhone.BackColor = System.Drawing.Color.Gainsboro;
             this.docPhone.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.docPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.docPhone.Location = new System.Drawing.Point(36, 209);
+            this.docPhone.Location = new System.Drawing.Point(93, 328);
             this.docPhone.Name = "docPhone";
             this.docPhone.Size = new System.Drawing.Size(170, 26);
             this.docPhone.TabIndex = 30;
@@ -158,7 +160,7 @@ namespace HospitalManagementSystem
             this.docName.BackColor = System.Drawing.Color.Gainsboro;
             this.docName.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.docName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.docName.Location = new System.Drawing.Point(36, 149);
+            this.docName.Location = new System.Drawing.Point(93, 268);
             this.docName.Name = "docName";
             this.docName.Size = new System.Drawing.Size(170, 26);
             this.docName.TabIndex = 29;
@@ -172,7 +174,7 @@ namespace HospitalManagementSystem
             this.docID.BackColor = System.Drawing.Color.Gainsboro;
             this.docID.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.docID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.docID.Location = new System.Drawing.Point(36, 102);
+            this.docID.Location = new System.Drawing.Point(93, 221);
             this.docID.Name = "docID";
             this.docID.Size = new System.Drawing.Size(170, 26);
             this.docID.TabIndex = 28;
@@ -181,7 +183,7 @@ namespace HospitalManagementSystem
             // 
             // PatientAdd
             // 
-            this.PatientAdd.Location = new System.Drawing.Point(12, 372);
+            this.PatientAdd.Location = new System.Drawing.Point(69, 491);
             this.PatientAdd.Name = "PatientAdd";
             this.PatientAdd.Size = new System.Drawing.Size(73, 29);
             this.PatientAdd.TabIndex = 33;
@@ -191,7 +193,7 @@ namespace HospitalManagementSystem
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(91, 372);
+            this.button1.Location = new System.Drawing.Point(148, 491);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 29);
             this.button1.TabIndex = 34;
@@ -201,7 +203,7 @@ namespace HospitalManagementSystem
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(170, 372);
+            this.button2.Location = new System.Drawing.Point(227, 491);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(73, 29);
             this.button2.TabIndex = 35;
@@ -211,7 +213,7 @@ namespace HospitalManagementSystem
             // 
             // DoctorExit
             // 
-            this.DoctorExit.Location = new System.Drawing.Point(4, 444);
+            this.DoctorExit.Location = new System.Drawing.Point(18, 563);
             this.DoctorExit.Name = "DoctorExit";
             this.DoctorExit.Size = new System.Drawing.Size(245, 37);
             this.DoctorExit.TabIndex = 36;
@@ -219,11 +221,34 @@ namespace HospitalManagementSystem
             this.DoctorExit.UseVisualStyleBackColor = true;
             this.DoctorExit.Click += new System.EventHandler(this.DoctorExit_Click);
             // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(12, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(373, 42);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Administrator";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(116, 179);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(115, 20);
+            this.label9.TabIndex = 38;
+            this.label9.Text = "Edit Doctor Info";
+            // 
             // AdminDoctorList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 553);
+            this.ClientSize = new System.Drawing.Size(1407, 733);
+            this.ControlBox = false;
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.DoctorExit);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -239,6 +264,7 @@ namespace HospitalManagementSystem
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDoctorList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDoctorList";
             this.Load += new System.EventHandler(this.AdminDoctorList_Load);
             this.panel1.ResumeLayout(false);
@@ -265,5 +291,7 @@ namespace HospitalManagementSystem
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button DoctorExit;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label9;
     }
 }
