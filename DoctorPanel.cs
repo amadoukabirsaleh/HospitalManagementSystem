@@ -95,12 +95,14 @@ namespace HospitalManagementSystem
 
         private void AptUpdate_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new AptUpdate().Show();
         }
 
         private void AptAdd_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new AptAdding().Show();
         }
 
         private void PatientDelete_Click(object sender, EventArgs e)

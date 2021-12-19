@@ -50,6 +50,7 @@ namespace HospitalManagementSystem
         {
             this.Hide();
             new AdminPanel().Show();
+
         }
     }
 }

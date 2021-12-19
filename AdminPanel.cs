@@ -32,12 +32,30 @@ namespace HospitalManagementSystem
         private void PatientUpdate_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new AdminUpdatePanel().Show();
+            new AdminUpdatePatient().Show();
         }
 
         private void PatientDelete_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Done!");
+        }
+
+        private void DoctorEdit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new DoctorView().Show();
+        }
+
+        private void AptAdd_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new AptAdding().Show();
+        }
+
+        private void AptUpdate_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new AptUpdate().Show();
         }
     }
 }

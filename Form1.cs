@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSystem
 {
-    public partial class AptAdding : Form
+    public partial class Form1 : Form
     {
-        public AptAdding()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void AptAdding_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new AdminPanel().Show();
         }
     }
 }

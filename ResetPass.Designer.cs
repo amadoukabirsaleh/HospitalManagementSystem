@@ -46,9 +46,10 @@ namespace HospitalManagementSystem
             // showPass
             // 
             this.showPass.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.showPass.Location = new System.Drawing.Point(89, 331);
+            this.showPass.Location = new System.Drawing.Point(78, 248);
+            this.showPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showPass.Name = "showPass";
-            this.showPass.Size = new System.Drawing.Size(133, 23);
+            this.showPass.Size = new System.Drawing.Size(116, 17);
             this.showPass.TabIndex = 21;
             this.showPass.Text = "Show Password";
             this.showPass.TextAlign = System.Drawing.ContentAlignment.TopLeft;
@@ -58,13 +59,13 @@ namespace HospitalManagementSystem
             // backLink
             // 
             this.backLink.AutoSize = true;
-            this.backLink.BackColor = System.Drawing.Color.SkyBlue;
+            this.backLink.BackColor = System.Drawing.Color.OldLace;
             this.backLink.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.backLink.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.backLink.LinkColor = System.Drawing.Color.Black;
-            this.backLink.Location = new System.Drawing.Point(183, 441);
+            this.backLink.Location = new System.Drawing.Point(160, 331);
             this.backLink.Name = "backLink";
-            this.backLink.Size = new System.Drawing.Size(114, 23);
+            this.backLink.Size = new System.Drawing.Size(93, 19);
             this.backLink.TabIndex = 19;
             this.backLink.TabStop = true;
             this.backLink.Text = "Back To Login";
@@ -74,9 +75,10 @@ namespace HospitalManagementSystem
             // resetButton
             // 
             this.resetButton.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.resetButton.Location = new System.Drawing.Point(51, 370);
+            this.resetButton.Location = new System.Drawing.Point(45, 278);
+            this.resetButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(196, 45);
+            this.resetButton.Size = new System.Drawing.Size(172, 34);
             this.resetButton.TabIndex = 18;
             this.resetButton.Text = "Reset";
             this.resetButton.UseVisualStyleBackColor = true;
@@ -84,36 +86,38 @@ namespace HospitalManagementSystem
             // 
             // NewPass
             // 
-            this.NewPass.Location = new System.Drawing.Point(50, 218);
+            this.NewPass.Location = new System.Drawing.Point(44, 164);
+            this.NewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NewPass.Multiline = true;
             this.NewPass.Name = "NewPass";
             this.NewPass.PasswordChar = '•';
-            this.NewPass.Size = new System.Drawing.Size(195, 29);
+            this.NewPass.Size = new System.Drawing.Size(171, 23);
             this.NewPass.TabIndex = 17;
             this.NewPass.TextChanged += new System.EventHandler(this.NewPass_TextChanged);
             // 
             // PatientId
             // 
-            this.PatientId.Location = new System.Drawing.Point(50, 150);
+            this.PatientId.Location = new System.Drawing.Point(44, 112);
+            this.PatientId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PatientId.Multiline = true;
             this.PatientId.Name = "PatientId";
-            this.PatientId.Size = new System.Drawing.Size(195, 29);
+            this.PatientId.Size = new System.Drawing.Size(171, 23);
             this.PatientId.TabIndex = 16;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(98, 124);
+            this.label3.Location = new System.Drawing.Point(86, 93);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 23);
+            this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 15;
             this.label3.Text = "PatientID:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(75, 195);
+            this.label2.Location = new System.Drawing.Point(66, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 20);
+            this.label2.Size = new System.Drawing.Size(116, 15);
             this.label2.TabIndex = 14;
             this.label2.Text = "New Password:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,9 +125,9 @@ namespace HospitalManagementSystem
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(60, 66);
+            this.label1.Location = new System.Drawing.Point(52, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 62);
+            this.label1.Size = new System.Drawing.Size(142, 46);
             this.label1.TabIndex = 13;
             this.label1.Text = "Reset Menu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,44 +135,47 @@ namespace HospitalManagementSystem
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Crimson;
-            this.panel2.Location = new System.Drawing.Point(0, 467);
+            this.panel2.Location = new System.Drawing.Point(0, 350);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 64);
+            this.panel2.Size = new System.Drawing.Size(262, 48);
             this.panel2.TabIndex = 12;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
             this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 64);
+            this.panel1.Size = new System.Drawing.Size(262, 48);
             this.panel1.TabIndex = 11;
             // 
             // ConfPass
             // 
-            this.ConfPass.Location = new System.Drawing.Point(51, 289);
+            this.ConfPass.Location = new System.Drawing.Point(45, 217);
+            this.ConfPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConfPass.Multiline = true;
             this.ConfPass.Name = "ConfPass";
             this.ConfPass.PasswordChar = '•';
-            this.ConfPass.Size = new System.Drawing.Size(195, 36);
+            this.ConfPass.Size = new System.Drawing.Size(171, 28);
             this.ConfPass.TabIndex = 23;
             this.ConfPass.TextChanged += new System.EventHandler(this.ConfPass_TextChanged);
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(75, 259);
+            this.label4.Location = new System.Drawing.Point(66, 194);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 27);
+            this.label4.Size = new System.Drawing.Size(129, 20);
             this.label4.TabIndex = 22;
             this.label4.Text = "Confirm Password:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ResetPass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.ClientSize = new System.Drawing.Size(300, 530);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(262, 398);
             this.Controls.Add(this.ConfPass);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.showPass);
@@ -182,6 +189,7 @@ namespace HospitalManagementSystem
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ResetPass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reset Menu";

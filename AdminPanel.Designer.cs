@@ -39,6 +39,7 @@ namespace HospitalManagementSystem
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.label3 = new System.Windows.Forms.Label();
             this.PatientUpdate = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -62,7 +63,6 @@ namespace HospitalManagementSystem
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.DoctorInfo.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -88,6 +88,7 @@ namespace HospitalManagementSystem
             this.AptUpdate.TabIndex = 9;
             this.AptUpdate.Text = "Update";
             this.AptUpdate.UseVisualStyleBackColor = true;
+            this.AptUpdate.Click += new System.EventHandler(this.AptUpdate_Click);
             // 
             // AptAdd
             // 
@@ -98,6 +99,7 @@ namespace HospitalManagementSystem
             this.AptAdd.TabIndex = 8;
             this.AptAdd.Text = "Add";
             this.AptAdd.UseVisualStyleBackColor = true;
+            this.AptAdd.Click += new System.EventHandler(this.AptAdd_Click);
             // 
             // PatientAdd
             // 
@@ -157,6 +159,11 @@ namespace HospitalManagementSystem
             // 
             this.columnHeader5.Text = "Patient Name";
             this.columnHeader5.Width = 165;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Doctor Name";
+            this.columnHeader6.Width = 160;
             // 
             // label3
             // 
@@ -314,8 +321,9 @@ namespace HospitalManagementSystem
             this.DoctorEdit.Name = "DoctorEdit";
             this.DoctorEdit.Size = new System.Drawing.Size(176, 34);
             this.DoctorEdit.TabIndex = 11;
-            this.DoctorEdit.Text = "Edit Personal Info";
+            this.DoctorEdit.Text = "See the Doctor List";
             this.DoctorEdit.UseVisualStyleBackColor = true;
+            this.DoctorEdit.Click += new System.EventHandler(this.DoctorEdit_Click);
             // 
             // panel5
             // 
@@ -331,7 +339,7 @@ namespace HospitalManagementSystem
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel3.BackColor = System.Drawing.Color.Silver;
             this.panel3.Controls.Add(this.DoctorEdit);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.DoctorExit);
@@ -373,7 +381,7 @@ namespace HospitalManagementSystem
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel4.BackColor = System.Drawing.Color.Silver;
             this.panel4.Controls.Add(this.AptDelete);
             this.panel4.Controls.Add(this.AptUpdate);
             this.panel4.Controls.Add(this.AptAdd);
@@ -389,11 +397,6 @@ namespace HospitalManagementSystem
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(956, 454);
             this.panel4.TabIndex = 8;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Doctor Name";
-            this.columnHeader6.Width = 160;
             // 
             // AdminPanel
             // 

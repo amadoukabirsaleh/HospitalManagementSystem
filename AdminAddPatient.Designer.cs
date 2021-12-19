@@ -177,15 +177,15 @@ namespace HospitalManagementSystem
             this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(78, 84);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(221, 30);
+            this.label6.Size = new System.Drawing.Size(212, 30);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Adding New Patients";
+            this.label6.Text = "Adding New Patient";
             // 
             // AdminAddPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(373, 669);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);

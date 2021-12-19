@@ -137,7 +137,7 @@ namespace HospitalManagementSystem
             // 
             // forgotPass
             // 
-            this.forgotPass.BackColor = System.Drawing.Color.SkyBlue;
+            this.forgotPass.BackColor = System.Drawing.Color.OldLace;
             this.forgotPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.forgotPass.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.forgotPass.LinkColor = System.Drawing.Color.Black;
@@ -167,7 +167,7 @@ namespace HospitalManagementSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(262, 398);
             this.Controls.Add(this.showPass);
             this.Controls.Add(this.forgotPass);

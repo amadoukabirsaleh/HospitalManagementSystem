@@ -10,24 +10,29 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSystem
 {
-    public partial class AdminAddDoctor : Form
+    public partial class DoctorView : Form
     {
-        public AdminAddDoctor()
+        public DoctorView()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Successfully Added");
             this.Hide();
             new AdminPanel().Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new DoctorView().Show();
+            new AdminAddDoctor().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new AdminUpdateDoctor().Show();
         }
     }
 }

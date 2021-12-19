@@ -43,12 +43,6 @@ namespace HospitalManagementSystem
             this.label6 = new System.Windows.Forms.Label();
             this.DoctorLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.AptDelete = new System.Windows.Forms.Button();
-            this.AptUpdate = new System.Windows.Forms.Button();
-            this.AptAdd = new System.Windows.Forms.Button();
-            this.PatientDelete = new System.Windows.Forms.Button();
-            this.PatientUpdate = new System.Windows.Forms.Button();
-            this.PatientAdd = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -63,6 +57,7 @@ namespace HospitalManagementSystem
             this.Status = new System.Windows.Forms.ColumnHeader();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.PatientUpdate = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.DoctorInfo.SuspendLayout();
@@ -91,7 +86,7 @@ namespace HospitalManagementSystem
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel3.BackColor = System.Drawing.Color.Silver;
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.DoctorExit);
             this.panel3.Controls.Add(this.DoctorInfo);
@@ -193,13 +188,8 @@ namespace HospitalManagementSystem
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel4.Controls.Add(this.AptDelete);
-            this.panel4.Controls.Add(this.AptUpdate);
-            this.panel4.Controls.Add(this.AptAdd);
-            this.panel4.Controls.Add(this.PatientDelete);
+            this.panel4.BackColor = System.Drawing.Color.Silver;
             this.panel4.Controls.Add(this.PatientUpdate);
-            this.panel4.Controls.Add(this.PatientAdd);
             this.panel4.Controls.Add(this.listView2);
             this.panel4.Controls.Add(this.listView1);
             this.panel4.Controls.Add(this.label3);
@@ -210,72 +200,6 @@ namespace HospitalManagementSystem
             this.panel4.Size = new System.Drawing.Size(956, 454);
             this.panel4.TabIndex = 4;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // AptDelete
-            // 
-            this.AptDelete.Location = new System.Drawing.Point(859, 422);
-            this.AptDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AptDelete.Name = "AptDelete";
-            this.AptDelete.Size = new System.Drawing.Size(82, 22);
-            this.AptDelete.TabIndex = 10;
-            this.AptDelete.Text = "Delete";
-            this.AptDelete.UseVisualStyleBackColor = true;
-            this.AptDelete.Click += new System.EventHandler(this.AptDelete_Click);
-            // 
-            // AptUpdate
-            // 
-            this.AptUpdate.Location = new System.Drawing.Point(430, 422);
-            this.AptUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AptUpdate.Name = "AptUpdate";
-            this.AptUpdate.Size = new System.Drawing.Size(82, 22);
-            this.AptUpdate.TabIndex = 9;
-            this.AptUpdate.Text = "Update";
-            this.AptUpdate.UseVisualStyleBackColor = true;
-            this.AptUpdate.Click += new System.EventHandler(this.AptUpdate_Click);
-            // 
-            // AptAdd
-            // 
-            this.AptAdd.Location = new System.Drawing.Point(23, 422);
-            this.AptAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AptAdd.Name = "AptAdd";
-            this.AptAdd.Size = new System.Drawing.Size(82, 22);
-            this.AptAdd.TabIndex = 8;
-            this.AptAdd.Text = "Add";
-            this.AptAdd.UseVisualStyleBackColor = true;
-            this.AptAdd.Click += new System.EventHandler(this.AptAdd_Click);
-            // 
-            // PatientDelete
-            // 
-            this.PatientDelete.Location = new System.Drawing.Point(859, 192);
-            this.PatientDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PatientDelete.Name = "PatientDelete";
-            this.PatientDelete.Size = new System.Drawing.Size(82, 22);
-            this.PatientDelete.TabIndex = 7;
-            this.PatientDelete.Text = "Delete";
-            this.PatientDelete.UseVisualStyleBackColor = true;
-            this.PatientDelete.Click += new System.EventHandler(this.PatientDelete_Click);
-            // 
-            // PatientUpdate
-            // 
-            this.PatientUpdate.Location = new System.Drawing.Point(430, 192);
-            this.PatientUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PatientUpdate.Name = "PatientUpdate";
-            this.PatientUpdate.Size = new System.Drawing.Size(82, 22);
-            this.PatientUpdate.TabIndex = 6;
-            this.PatientUpdate.Text = "Update";
-            this.PatientUpdate.UseVisualStyleBackColor = true;
-            this.PatientUpdate.Click += new System.EventHandler(this.PatientUpdate_Click);
-            // 
-            // PatientAdd
-            // 
-            this.PatientAdd.Location = new System.Drawing.Point(23, 192);
-            this.PatientAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PatientAdd.Name = "PatientAdd";
-            this.PatientAdd.Size = new System.Drawing.Size(82, 22);
-            this.PatientAdd.TabIndex = 5;
-            this.PatientAdd.Text = "Add";
-            this.PatientAdd.UseVisualStyleBackColor = true;
-            this.PatientAdd.Click += new System.EventHandler(this.PatientAdd_Click);
             // 
             // listView2
             // 
@@ -294,7 +218,7 @@ namespace HospitalManagementSystem
             this.listView2.Location = new System.Drawing.Point(23, 267);
             this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(919, 146);
+            this.listView2.Size = new System.Drawing.Size(919, 174);
             this.listView2.TabIndex = 4;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -400,6 +324,17 @@ namespace HospitalManagementSystem
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // PatientUpdate
+            // 
+            this.PatientUpdate.Location = new System.Drawing.Point(430, 192);
+            this.PatientUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PatientUpdate.Name = "PatientUpdate";
+            this.PatientUpdate.Size = new System.Drawing.Size(104, 22);
+            this.PatientUpdate.TabIndex = 6;
+            this.PatientUpdate.Text = "Add Rerport";
+            this.PatientUpdate.UseVisualStyleBackColor = true;
+            this.PatientUpdate.Click += new System.EventHandler(this.PatientUpdate_Click);
+            // 
             // DoctorPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -437,18 +372,12 @@ namespace HospitalManagementSystem
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label DoctorLabel;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button AptUpdate;
-        private System.Windows.Forms.Button AptAdd;
-        private System.Windows.Forms.Button PatientDelete;
-        private System.Windows.Forms.Button PatientUpdate;
-        private System.Windows.Forms.Button PatientAdd;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button AptDelete;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -460,5 +389,6 @@ namespace HospitalManagementSystem
         private System.Windows.Forms.ColumnHeader PatientNumber;
         private System.Windows.Forms.ColumnHeader Status;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button PatientUpdate;
     }
 }
