@@ -74,7 +74,8 @@ namespace HospitalManagementSystem
             var ds = new DataSet();
             da.Fill(ds);
             dataGridView2.DataSource = ds.Tables[0];
-           
+            this.dataGridView2.Columns["docID"].Visible = false;
+
 
 
             Con.Close();
