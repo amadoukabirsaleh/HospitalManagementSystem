@@ -43,6 +43,7 @@ namespace HospitalManagementSystem
             this.label6 = new System.Windows.Forms.Label();
             this.DoctorLabel = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.PatientUpdate = new System.Windows.Forms.Button();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -57,7 +58,6 @@ namespace HospitalManagementSystem
             this.Status = new System.Windows.Forms.ColumnHeader();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.PatientUpdate = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.DoctorInfo.SuspendLayout();
@@ -201,6 +201,17 @@ namespace HospitalManagementSystem
             this.panel4.TabIndex = 4;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // PatientUpdate
+            // 
+            this.PatientUpdate.Location = new System.Drawing.Point(430, 192);
+            this.PatientUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PatientUpdate.Name = "PatientUpdate";
+            this.PatientUpdate.Size = new System.Drawing.Size(104, 22);
+            this.PatientUpdate.TabIndex = 6;
+            this.PatientUpdate.Text = "Add Report";
+            this.PatientUpdate.UseVisualStyleBackColor = true;
+            this.PatientUpdate.Click += new System.EventHandler(this.PatientUpdate_Click);
+            // 
             // listView2
             // 
             this.listView2.BackColor = System.Drawing.SystemColors.Info;
@@ -323,17 +334,6 @@ namespace HospitalManagementSystem
             this.label2.Text = "Patient List";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // PatientUpdate
-            // 
-            this.PatientUpdate.Location = new System.Drawing.Point(430, 192);
-            this.PatientUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PatientUpdate.Name = "PatientUpdate";
-            this.PatientUpdate.Size = new System.Drawing.Size(104, 22);
-            this.PatientUpdate.TabIndex = 6;
-            this.PatientUpdate.Text = "Add Rerport";
-            this.PatientUpdate.UseVisualStyleBackColor = true;
-            this.PatientUpdate.Click += new System.EventHandler(this.PatientUpdate_Click);
             // 
             // DoctorPanel
             // 

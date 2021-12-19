@@ -49,7 +49,7 @@ namespace HospitalManagementSystem
         private void signinButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new AdminPanel().Show();
+            new DoctorPanel().Show();
 
         }
     }
