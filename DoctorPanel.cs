@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HospitalManagementSystem
 {
@@ -16,10 +17,51 @@ namespace HospitalManagementSystem
         {
             InitializeComponent();
         }
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LENOVO\Documents\HMSdb.mdf;Integrated Security=True;Connect Timeout=30");
 
         private void DoctorPanel_Load(object sender, EventArgs e)
         {
+            label6.Text = SignIn.username;
 
+            //Doc ID displaying
+            Con.Open();
+            SqlCommand cmd0 = new SqlCommand();
+            cmd0.CommandType = CommandType.Text;
+            cmd0.CommandText = "select docID from DoctorTable where docName= '" + label6.Text + "'";
+            cmd0.Connection = Con;
+            SqlDataReader dr0 = cmd0.ExecuteReader();
+            dr0.Read();
+            int d0 = dr0.GetInt32(0);
+            label8.Text = d0.ToString();
+            Con.Close();
+
+
+            //Doc Specialty displaying
+            Con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "select docSpecialty from DoctorTable where docName= '" + label6.Text + "'";
+            cmd.Connection = Con;
+            label7.Text = ((string)cmd.ExecuteScalar());
+            Con.Close();
+
+
+            populate();
+        }
+
+        void populate()
+        {
+            Con.Open();
+            string query = "select *from PatientTable where DocID = " + label8.Text + "";
+            SqlDataAdapter da = new SqlDataAdapter(query, Con);
+            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            this.dataGridView1.Columns["docID"].Visible = false;
+            this.dataGridView1.Columns["patPassword"].Visible = false;
+
+
+            Con.Close();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -111,7 +153,7 @@ namespace HospitalManagementSystem
         private void PatientUpdate_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new ReportPage().Show();
+            new AdminUpdatePanel().Show();
         }
 
         private void PatientAdd_Click(object sender, EventArgs e)

@@ -68,6 +68,10 @@ namespace HospitalManagementSystem
             this.label19 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -298,6 +302,10 @@ namespace HospitalManagementSystem
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label20);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.printDocument);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
@@ -359,9 +367,8 @@ namespace HospitalManagementSystem
             this.patientMedecinelbl.ForeColor = System.Drawing.Color.Crimson;
             this.patientMedecinelbl.Location = new System.Drawing.Point(534, 140);
             this.patientMedecinelbl.Name = "patientMedecinelbl";
-            this.patientMedecinelbl.Size = new System.Drawing.Size(108, 24);
+            this.patientMedecinelbl.Size = new System.Drawing.Size(0, 24);
             this.patientMedecinelbl.TabIndex = 7;
-            this.patientMedecinelbl.Text = "MEDECINES";
             this.patientMedecinelbl.Click += new System.EventHandler(this.label7_Click);
             // 
             // patientDiagnosislbl
@@ -372,9 +379,8 @@ namespace HospitalManagementSystem
             this.patientDiagnosislbl.ForeColor = System.Drawing.Color.Crimson;
             this.patientDiagnosislbl.Location = new System.Drawing.Point(541, 80);
             this.patientDiagnosislbl.Name = "patientDiagnosislbl";
-            this.patientDiagnosislbl.Size = new System.Drawing.Size(101, 24);
+            this.patientDiagnosislbl.Size = new System.Drawing.Size(0, 24);
             this.patientDiagnosislbl.TabIndex = 6;
-            this.patientDiagnosislbl.Text = "DIAGNOSIS";
             this.patientDiagnosislbl.Click += new System.EventHandler(this.label6_Click);
             // 
             // patientSymptomlbl
@@ -385,9 +391,8 @@ namespace HospitalManagementSystem
             this.patientSymptomlbl.ForeColor = System.Drawing.Color.Crimson;
             this.patientSymptomlbl.Location = new System.Drawing.Point(253, 142);
             this.patientSymptomlbl.Name = "patientSymptomlbl";
-            this.patientSymptomlbl.Size = new System.Drawing.Size(104, 24);
+            this.patientSymptomlbl.Size = new System.Drawing.Size(0, 24);
             this.patientSymptomlbl.TabIndex = 5;
-            this.patientSymptomlbl.Text = "SYMPTOMS";
             this.patientSymptomlbl.Click += new System.EventHandler(this.label5_Click);
             // 
             // patientNamelbl
@@ -398,9 +403,8 @@ namespace HospitalManagementSystem
             this.patientNamelbl.ForeColor = System.Drawing.Color.Crimson;
             this.patientNamelbl.Location = new System.Drawing.Point(253, 80);
             this.patientNamelbl.Name = "patientNamelbl";
-            this.patientNamelbl.Size = new System.Drawing.Size(132, 24);
+            this.patientNamelbl.Size = new System.Drawing.Size(0, 24);
             this.patientNamelbl.TabIndex = 4;
-            this.patientNamelbl.Text = "PATIENT NAME";
             this.patientNamelbl.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
@@ -569,6 +573,54 @@ namespace HospitalManagementSystem
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.Crimson;
+            this.label5.Location = new System.Drawing.Point(116, 80);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(142, 24);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "PATIENT NAME :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Crimson;
+            this.label6.Location = new System.Drawing.Point(143, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 24);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "SYMPTOMS :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.Crimson;
+            this.label7.Location = new System.Drawing.Point(430, 80);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(111, 24);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "DIAGNOSIS :";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.ForeColor = System.Drawing.Color.Crimson;
+            this.label20.Location = new System.Drawing.Point(420, 140);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(118, 24);
+            this.label20.TabIndex = 15;
+            this.label20.Text = "MEDECINES :";
+            // 
             // PatientPannel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -654,5 +706,9 @@ namespace HospitalManagementSystem
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }

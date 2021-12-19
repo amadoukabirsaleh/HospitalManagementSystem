@@ -47,7 +47,8 @@ namespace HospitalManagementSystem
 
         private void exitLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            Application.Exit();
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -63,18 +64,31 @@ namespace HospitalManagementSystem
                 MessageBox.Show("Enter a Username and a Password");
             }
 
-            else
+            else 
             {
                 Con.Open();
+                //For patients
                 SqlDataAdapter sda = new SqlDataAdapter("select Count(*) from PatientTable where patName = '"+ uName.Text + "' AND patPassword = '" + Password.Text + "'",Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
+
+                //For doctors
+              SqlDataAdapter sda1 = new SqlDataAdapter("select Count(*) from DoctorTable where docName = '" + uName.Text + "' AND docPass = '" + Password.Text + "'", Con);
+               DataTable dt1 = new DataTable();
+               sda1.Fill(dt1);
 
                 if (dt.Rows[0][0].ToString() == "1")
                 {
                     username = uName.Text;
                     PatientPannel P = new PatientPannel();
                     P.Show();
+                    this.Hide();
+                }
+                else if (dt1.Rows[0][0].ToString() == "1")
+                {
+                    username = uName.Text;
+                    DoctorPanel d = new DoctorPanel();
+                    d.Show();
                     this.Hide();
                 }
                 else
