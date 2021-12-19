@@ -42,7 +42,6 @@ namespace HospitalManagementSystem
             this.patGender = new System.Windows.Forms.ComboBox();
             this.patBloodGroup = new System.Windows.Forms.ComboBox();
             this.patDisease = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
@@ -258,27 +257,14 @@ namespace HospitalManagementSystem
             this.patDisease.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.patDisease.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Crimson;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(117, 513);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 46);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Appointment";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Crimson;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(20, 598);
+            this.button3.Location = new System.Drawing.Point(12, 575);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(373, 37);
+            this.button3.Size = new System.Drawing.Size(373, 45);
             this.button3.TabIndex = 13;
             this.button3.Text = "Log out";
             this.button3.UseVisualStyleBackColor = false;
@@ -597,7 +583,6 @@ namespace HospitalManagementSystem
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.patDisease);
             this.Controls.Add(this.patBloodGroup);
             this.Controls.Add(this.patGender);
@@ -607,6 +592,7 @@ namespace HospitalManagementSystem
             this.Controls.Add(this.patName);
             this.Controls.Add(this.patID);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PatientPannel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatientPannel";
@@ -634,7 +620,6 @@ namespace HospitalManagementSystem
         private System.Windows.Forms.ComboBox patGender;
         private System.Windows.Forms.ComboBox patBloodGroup;
         private System.Windows.Forms.TextBox patDisease;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;

@@ -44,7 +44,6 @@ namespace HospitalManagementSystem
             this.panel3 = new System.Windows.Forms.Panel();
             this.docID = new System.Windows.Forms.TextBox();
             this.patPassword = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.patDisease = new System.Windows.Forms.TextBox();
             this.patBloodGroup = new System.Windows.Forms.ComboBox();
             this.patGender = new System.Windows.Forms.ComboBox();
@@ -54,14 +53,17 @@ namespace HospitalManagementSystem
             this.patName = new System.Windows.Forms.TextBox();
             this.patID = new System.Windows.Forms.TextBox();
             this.AdminLabel = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
             this.DoctorInfo.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -237,16 +239,6 @@ namespace HospitalManagementSystem
             this.patPassword.Text = "PATIENT PASSWORD";
             this.patPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(26, 540);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(294, 29);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "See Doctor List";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // patDisease
             // 
             this.patDisease.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
@@ -374,6 +366,16 @@ namespace HospitalManagementSystem
             this.AdminLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.AdminLabel.Click += new System.EventHandler(this.AdminLabel_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(26, 540);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(294, 29);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "See Doctor List";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Crimson;
@@ -385,6 +387,7 @@ namespace HospitalManagementSystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(2, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1403, 64);
@@ -402,6 +405,16 @@ namespace HospitalManagementSystem
             this.panel4.Size = new System.Drawing.Size(1093, 605);
             this.panel4.TabIndex = 8;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(782, 540);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(294, 29);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "See Apointment List";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -423,15 +436,17 @@ namespace HospitalManagementSystem
             this.dataGridView1.TabIndex = 19;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button1
+            // label10
             // 
-            this.button1.Location = new System.Drawing.Point(782, 540);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(294, 29);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "See Apointment List";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Arial Narrow", 19.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.LightCyan;
+            this.label10.Location = new System.Drawing.Point(468, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(466, 37);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "HOSPITAL MANAGEMENT SYSTEM";
             // 
             // AdminPanel
             // 
@@ -454,6 +469,8 @@ namespace HospitalManagementSystem
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -491,5 +508,6 @@ namespace HospitalManagementSystem
         private System.Windows.Forms.TextBox docID;
         private System.Windows.Forms.TextBox patPassword;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
     }
 }
