@@ -14,10 +14,12 @@ Please note that this system is designed as a closed system, where only administ
 
 First, clone the repository to your local machine:
 
-```bash
 git clone https://github.com/amadoukabirsaleh/HospitalManagementSystem.git
 Then, open the solution file HospitalManagementSystem.sln in your preferred C# IDE (like Visual Studio or Rider).
 
 ## Contributing
 Feel free to fork this repository, make changes, and submit pull requests. If you have any questions, please feel free to contact me.
 
+
+## Screenshots
+![](/images/1.png)
