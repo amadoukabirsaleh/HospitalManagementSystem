@@ -22,4 +22,9 @@ Feel free to fork this repository, make changes, and submit pull requests. If yo
 
 
 ## Screenshots
-![](/images/1.jpg)
+![](/Images/1.jpeg)
+![](/Images/2.jpeg)
+![](/Images/3.jpeg)
+![](/Images/4.jpeg)
+![](/Images/5.jpeg)
+![](/Images/6.jpeg)
